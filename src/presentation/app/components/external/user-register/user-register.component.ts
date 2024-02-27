@@ -16,7 +16,7 @@ export default class UserRegisterComponent {
 
   register(){
 
-    this.registerUC.execute({phoneNum: '929299292', password:'abc123'}).toPromise().then(res =>{
+    this.registerUC.execute({phoneNum: '929299292', password:'abc123'}).subscribe(res =>{
       console.log(res)
     })
   }

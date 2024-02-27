@@ -15,7 +15,7 @@ export default class UserLoginComponent {
   constructor(private loginUC: UserLoginUsecase) {
   }
   login(){
-    this.loginUC.execute({username : 'elmer', password: 'abc123'}).toPromise().then(res => {
+    this.loginUC.execute({username : 'elmer', password: 'abc123'}).subscribe(res => {
       console.log(res)
     })
   }

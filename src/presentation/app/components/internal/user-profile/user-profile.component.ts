@@ -13,7 +13,7 @@ export default class UserProfileComponent {
   constructor(private getProfileUC: GetUserProfileUsercase) {
   }
   getProfile(){
-    this.getProfileUC.execute().toPromise().then(res=>{
+    this.getProfileUC.execute().subscribe(res=>{
       console.log(res)
     })
   }
