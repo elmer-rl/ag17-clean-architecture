@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {UserRegisterUsercase} from "../../../../../domain/usecases/user-register.usercase";
 import {DataModule} from "../../../../../data/data.module";
 
@@ -10,10 +10,8 @@ import {DataModule} from "../../../../../data/data.module";
   styleUrl: './user-register.component.scss'
 })
 export default class UserRegisterComponent {
-
-  constructor(private registerUC: UserRegisterUsercase) {
-  }
-
+  private registerUC = inject(UserRegisterUsercase);
+  
   register(){
 
     this.registerUC.execute({phoneNum: '929299292', password:'abc123'}).subscribe(res =>{
