@@ -6,7 +6,7 @@ import { DataModule } from '../../../../../data/data.module';
 @Component({
   selector: 'app-user-login',
   standalone: true,
-  imports: [DataModule],
+  imports: [DataModule, CommonModule],
   templateUrl: './user-login.component.html',
   styleUrl: './user-login.component.scss'
 })
